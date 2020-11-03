@@ -50,6 +50,8 @@ on post-fs-data
     mkdir /data/vendor/fpc 0770 system system
     copy /data/vendor/fpc/user.db /data/vendor_de/0/fpdata/user.db
     chown system system /data/vendor_de/0/fpdata/user.db
+    copy /data/vendor_de/0/fpdata/user.db /data/vendor/fpc/user.db
+    chown system system /data/vendor/fpc/user.db
 
 service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sdm660
     class late_start
